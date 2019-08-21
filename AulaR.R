@@ -14,13 +14,7 @@ install.packages("C:/caminho/nome-do-pacote.zip", repos = NULL).
 # CARREGANDO APENAS UM PACOTE
 library(nome do pacote)
 
-# CARREGANDO MULTIPLOS PACOTES DE UMA S? VEZ
-x <- c('readxl', 'stringr','dplyr','ggplot2')
-# install.packages(x) # caso nao tenham todos os pacotes, instala multiplos pacotes
-lapply(x, library, character.only = TRUE) # CARREGANDO TODOS OS PACOTES DE UMA VEZ
-
-
-## 2. OPERADORES NUM?RICOS EM R ----
+## 2. OPERADORES NUMÉRICOS EM R ----
 
 1 + 1    # adição
 ## [1] 2
@@ -143,14 +137,12 @@ x
 
 library(readxl)
 
-tb1 <- read.csv('tab1.csv',sep=';',dec = ',')
-tb2 <- read.csv('tab2.csv',sep=';',dec = ',')
+tb1 <- read.csv('piraclim.csv',dec = ',')
 
-
-#COMANDOS SUPER ?TEIS
+#COMANDOS SUPER ÚTEIS
 
 head(tb1) # Mostra as primeiras 6 linhas.
-tail(tb1) # Mostra as ?ltimas 6 linhas.
+tail(tb1) # Mostra as últimas 6 linhas.
 nrow(tb1) # Número de linhas
 ncol(tb1) # Número de colunas
 dim(tb1) # Número de linhas e de colunas.
@@ -160,18 +152,18 @@ str(tb1) # Estrutura do data.frame. Mostra, entre outras coisas, as classes de c
 
 # 5 - TRABALHANDO EM UM BANCO DE DADOS ----
 
-# 5.1 - FILTRANDO DADOS POR UMA VARI?VEL
+# 5.1 - FILTRANDO DADOS POR UMA VARIÁVEL
 tb2 <- tb2[tb2$NOME!=' ',]
 # 5.2 - EXECUTANDO OPERAÇÕES MATEMÁTICAS
-# DESCOBRIR O TAMANHO DA ?REA DE LATOSSOLO VERMELHO NO BRASIL
+# DESCOBRIR O TAMANHO DA ÁREA DE LATOSSOLO VERMELHO NO BRASIL
 unique(tb2$DESC_)
 
 # CONTINUAR A PARTIR DAQUI
 
 
 # 5.3 - UNINDO CONJUNTOS DE DADOS
-s1 <- tb2[tb2$DESC_=='Nitossolo Vermelho',]
-s2 <- tb2[tb2$DESC_=='Nitossolo H?plico',]
+s1 <- tb1[tb1$ANO=='1986',]
+s2 <- tb1[tb1$ANO=='2018',]
 
 s3 <- rbind(s1,s2)
 
@@ -179,12 +171,6 @@ s3 <- rbind(s1,s2)
 
 # 5.4.1 - IF (OU ESTRUTURA CONDICIONAL)
 
-# TESTANDO A IDENTIFICA??O DA TEXTURA DE UM SOLO
-tx1 <- c('Nitossolo Vermelho','Latossolo Vermelho','Gleissolo H?plico','Argilossolo Vermelho')
-tx2 <- c('Neossolo Lit?lico','Neossolo Quartzar?nico','Luvissolo Cr?mico','Cambissolo H?plico')
-tx3 <- c('Massa d??gua','Afloramentos de Rochas','Dunas')
-
-x <- 'NOME DO SOLO AQUI'
 
 # TESTE DA CONDIÇÃO COMO VERDADEIRA (TRUE) OU FALSA (FALSE)
 # x < y -	x menor que y?
@@ -199,8 +185,8 @@ x <- 'NOME DO SOLO AQUI'
 # xor(x, y) -	x ou y s?o verdadeiros (apenas um deles)?
 # x %in% y - x em y
 
-if(x %in% tx1){
-  print('Solo argiloso')
+if(x %in% tb1$ANO){
+  print('Ano presente')
 }
 
 # CONTINUAR PARA TODAS AS TEXTURAS DE SOLO
