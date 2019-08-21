@@ -14,13 +14,13 @@ install.packages("C:/caminho/nome-do-pacote.zip", repos = NULL).
 # CARREGANDO APENAS UM PACOTE
 library(nome do pacote)
 
-# CARREGANDO MULTIPLOS PACOTES DE UMA SÓ VEZ
+# CARREGANDO MULTIPLOS PACOTES DE UMA S? VEZ
 x <- c('readxl', 'stringr','dplyr','ggplot2')
 # install.packages(x) # caso nao tenham todos os pacotes, instala multiplos pacotes
 lapply(x, library, character.only = TRUE) # CARREGANDO TODOS OS PACOTES DE UMA VEZ
 
 
-## 2. OPERADORES NUMÉRICOS EM R ----
+## 2. OPERADORES NUM?RICOS EM R ----
 
 1 + 1    # adição
 ## [1] 2
@@ -30,7 +30,7 @@ lapply(x, library, character.only = TRUE) # CARREGANDO TODOS OS PACOTES DE UMA V
 ## [1] 6
 5 / 3    # divisão
 ## [1] 1.666667
-4 ^ 2    # potência
+4 ^ 2    # poténcia
 ## [1] 16
 5 %% 3   # resto da divisão de 5 por 3
 ## [1] 2
@@ -60,7 +60,7 @@ x
 "positivo"
 ## [1] "positivo"
 "Error: objeto x não encontrado"
-## [1] "Error: objeto x não encontrado"
+## [1] "Error: objeto x n?o encontrado"
 
 # numeric
 1
@@ -96,7 +96,7 @@ class(x)
 ## [1] "numeric"
 
 # 3.2 - VETORES
-# VETORES PODEM ARMAZENAR SEQUÊNCIAS DE VALORES, PODENDO AINDA POSSUIR CLASSES
+# VETORES PODEM ARMAZENAR SEQU?NCIAS DE VALORES, PODENDO AINDA POSSUIR CLASSES
 
 v1 <- c(1,2,3,4)
 v1
@@ -105,7 +105,7 @@ v1
 class(v1)
 ## [1] "numeric"
 
-# PODEM AINDA SER FEITAS OPERAÇÕES MATEMÁTICAS
+# PODEM AINDA SER FEITAS OPERA??ES MATEM?TICAS
 
 v1*2
 ## [1] 2 4 6 8
@@ -114,12 +114,12 @@ v1*2
 
 y <- c(1.7, "a")  ## character
 
-# NO CASO DE MULTIPLAS CLASSES EM UM MESMO VETOR, ELE TRANSFORMARÁ O VETOR NA CLASSE DOMINANTE
+# NO CASO DE MULTIPLAS CLASSES EM UM MESMO VETOR, ELE TRANSFORMAR? O VETOR NA CLASSE DOMINANTE
 
 #character > complex > numeric > integer > logical
 
 # 3.3 - MATRIZES
-# SÃO VETORES DE 2 DIMENSÕES QUE ACEITAM APENAS ELEMENTOS DE UMA CLASSE
+# S?O VETORES DE 2 DIMENS?ES QUE ACEITAM APENAS ELEMENTOS DE UMA CLASSE
 
 m <- matrix(1:6, nrow = 2, ncol = 3)
 m
@@ -128,7 +128,7 @@ m[3,  ]   # seleciona a terceira linha
 m[ , 2]   # seleciona a segunda coluna
 m[1, 2]   # seleciona o primeiro elemento da segunda coluna
 t(m)      # matriz transposta
-m %*% n   # multiplicação matricial
+m %*% n   # multiplica??o matricial
 solve(m)  # matriz inversa de m
 
 # 3.4 - LISTAS
@@ -137,20 +137,20 @@ x <- list(1:5, "Z", TRUE, c("a", "b"))
 x
 
 # 3.5 - DATA.FRAME
-# SÃO TABELAS COM DADOS A SEREM TRABALHADOS, CONTENDO ELEMENTOS DE MULTIPLAS CLASSES
+# S?O TABELAS COM DADOS A SEREM TRABALHADOS, CONTENDO ELEMENTOS DE MULTIPLAS CLASSES
 
 # 4 - IMPORTANDANDO DADOS ----
 
 library(readxl)
 
-tb1 <- read.csv('/home/luis/tab1.csv',sep=';',dec = ',')
-tb2 <- read.csv('/home/luis/tab2.csv',sep=';',dec = ',')
+tb1 <- read.csv('tab1.csv',sep=';',dec = ',')
+tb2 <- read.csv('tab2.csv',sep=';',dec = ',')
 
 
-#COMANDOS SUPER ÚTEIS
+#COMANDOS SUPER ?TEIS
 
 head(tb1) # Mostra as primeiras 6 linhas.
-tail(tb1) # Mostra as últimas 6 linhas.
+tail(tb1) # Mostra as ?ltimas 6 linhas.
 nrow(tb1) # Número de linhas
 ncol(tb1) # Número de colunas
 dim(tb1) # Número de linhas e de colunas.
@@ -160,10 +160,10 @@ str(tb1) # Estrutura do data.frame. Mostra, entre outras coisas, as classes de c
 
 # 5 - TRABALHANDO EM UM BANCO DE DADOS ----
 
-# 5.1 - FILTRANDO DADOS POR UMA VARIÁVEL
+# 5.1 - FILTRANDO DADOS POR UMA VARI?VEL
 tb2 <- tb2[tb2$NOME!=' ',]
 # 5.2 - EXECUTANDO OPERAÇÕES MATEMÁTICAS
-# DESCOBRIR O TAMANHO DA ÁREA DE LATOSSOLO VERMELHO NO BRASIL
+# DESCOBRIR O TAMANHO DA ?REA DE LATOSSOLO VERMELHO NO BRASIL
 unique(tb2$DESC_)
 
 # CONTINUAR A PARTIR DAQUI
@@ -171,7 +171,7 @@ unique(tb2$DESC_)
 
 # 5.3 - UNINDO CONJUNTOS DE DADOS
 s1 <- tb2[tb2$DESC_=='Nitossolo Vermelho',]
-s2 <- tb2[tb2$DESC_=='Nitossolo Háplico',]
+s2 <- tb2[tb2$DESC_=='Nitossolo H?plico',]
 
 s3 <- rbind(s1,s2)
 
@@ -179,10 +179,10 @@ s3 <- rbind(s1,s2)
 
 # 5.4.1 - IF (OU ESTRUTURA CONDICIONAL)
 
-# TESTANDO A IDENTIFICAÇÃO DA TEXTURA DE UM SOLO
-tx1 <- c('Nitossolo Vermelho','Latossolo Vermelho','Gleissolo Háplico','Argilossolo Vermelho')
-tx2 <- c('Neossolo Litólico','Neossolo Quartzarênico','Luvissolo Crômico','Cambissolo Háplico')
-tx3 <- c('Massa d´Água','Afloramentos de Rochas','Dunas')
+# TESTANDO A IDENTIFICA??O DA TEXTURA DE UM SOLO
+tx1 <- c('Nitossolo Vermelho','Latossolo Vermelho','Gleissolo H?plico','Argilossolo Vermelho')
+tx2 <- c('Neossolo Lit?lico','Neossolo Quartzar?nico','Luvissolo Cr?mico','Cambissolo H?plico')
+tx3 <- c('Massa d??gua','Afloramentos de Rochas','Dunas')
 
 x <- 'NOME DO SOLO AQUI'
 
@@ -194,9 +194,9 @@ x <- 'NOME DO SOLO AQUI'
 # x == y - x igual a y?
 # x != y - x diferente de y?
 # !x 	Negativa de x
-# x | y -	x ou y são verdadeiros?
-# x & y -	x e y são verdadeiros?
-# xor(x, y) -	x ou y são verdadeiros (apenas um deles)?
+# x | y -	x ou y s?o verdadeiros?
+# x & y -	x e y s?o verdadeiros?
+# xor(x, y) -	x ou y s?o verdadeiros (apenas um deles)?
 # x %in% y - x em y
 
 if(x %in% tx1){
@@ -205,8 +205,8 @@ if(x %in% tx1){
 
 # CONTINUAR PARA TODAS AS TEXTURAS DE SOLO
 
-# 5.4.2 - FOR (OU ESTRUTURA DE REPETIÇÃO)
-# SEPARANDO UM NÚMERO LIMITADO DE MUNICÍPIOS
+# 5.4.2 - FOR (OU ESTRUTURA DE REPETI??O)
+# SEPARANDO UM N?MERO LIMITADO DE MUNIC?PIOS
 
 # df <- c()
 # for(i in 1:nrow(tb1)){
@@ -239,7 +239,7 @@ plot(x, y, type = "l")
 hist(rnorm(1000))
 hist(rnorm(1000), breaks = 6)
 
-# DESCOBRIR NO ?HELP DESTE COMANDO, COMO MUDAR A LEGENDA E O TÍTULO
+# DESCOBRIR NO ?HELP DESTE COMANDO, COMO MUDAR A LEGENDA E O T?TULO
 
 # 6.4 - BAR PLOT
 # USAR EXEMPLO DO ?HELP DESSA DESTE COMANDO
@@ -247,26 +247,7 @@ hist(rnorm(1000), breaks = 6)
 # 7 - FUNÇÕES ----
 # CRIE SEU PRÓPRIO COMANDO NO R
 
-tp1 <- function(mun,uf){
-  if(mun!=''){
-    t <- tb2[tb2$NOME==mun&tb2$UF==uf,]
-    tm <- c();
-    for(i in 1:length(unique(t$DESC_))){
-      t1 <- t[t$DESC_==unique(t$DESC_)[i],]
-      tm[i] <- sum(t1$AreaHa)
-    }
-    df <- data.frame(mun,uf,unique(t$DESC_),tm)
-    colnames(df) <- c('Município','UF','Solo','Tamanho(ha)')
-  }else{
-    t <- tb2[tb2$UF==uf,]
-    tm <- c();
-    for(i in 1:length(unique(t$DESC_))){
-      t1 <- t[t$DESC_==unique(t$DESC_)[i],]
-      tm[i] <- sum(t1$AreaHa)
-    }
-    df <- data.frame(uf,unique(t$DESC_),tm)
-    colnames(df) <- c('Município','UF','Solo','Tamanho(ha)')
-  }
-  return(df)
+tp1 <- function(){
+ 
 }
 
