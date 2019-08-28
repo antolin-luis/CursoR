@@ -135,8 +135,6 @@ x
 
 # 4 - IMPORTANDANDO DADOS ----
 
-library(readxl)
-
 tb1 <- read.csv('piraclim.csv',dec = ',')
 
 #COMANDOS SUPER ÚTEIS
