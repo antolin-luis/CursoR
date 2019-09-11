@@ -173,23 +173,23 @@ y <- c(1.7, "a")  ## character
 
 #character > complex > numeric > integer > logical
 
-# 3.3 - SEQUÊNCIAS NUMÉRICAS
+# 3.3 - SEQU?NCIAS NUM?RICAS
 
-# SEQUÊNCIA SIMPLES
+# SEQU?NCIA SIMPLES
 
 1:4 # CRESCENTE
 
 4:1 # DECRESCENTE
 
-# SEQUÊNCIA COM ORDEM DEFINIDA
+# SEQU?NCIA COM ORDEM DEFINIDA
 
 seq(1,20,by=2) # CRESCENTE
  
 seq(20,1,by=-2) # DECRESCENTE
 
-seq(1,20,length=5) # QUANDO APENAS QUEREMOS UM VETOR DE TAMANHO DEFINIDO, EMBORA NÃO SAIBAMOS O ESPAÇO ENTRE OS NÚMEROS
+seq(1,20,length=5) # QUANDO APENAS QUEREMOS UM VETOR DE TAMANHO DEFINIDO, EMBORA N?O SAIBAMOS O ESPA?O ENTRE OS N?MEROS
 
-# POR REPETIÇÃO
+# POR REPETI??O
 
 rep(3,times=5)
 
@@ -197,21 +197,21 @@ rep(1:5, 3)
 
 rep(1:5,each=3)
 
-# SEQUÊNCIA DE NÚMEROS EM UMA DISTRIBUIÇÃO NORMAL
+# SEQU?NCIA DE N?MEROS EM UMA DISTRIBUI??O NORMAL
 
 vn1 <-  rnorm( 1000, mean = 40,  sd = 9 )
 
-# OUTRAS DISTRIBUIÇÕES:
+# OUTRAS DISTRIBUI??ES:
 # rpois, rbinom, runif....
 
-# ORDENANDO A SEQUÊNCIA:
+# ORDENANDO A SEQU?NCIA:
 
 x  <-  sort( rnorm(1000, mean=1) ) # CRESCENTE
 
 x  <-  sort( rnorm(1000, mean=1), decreasing = T ) # DECRECENTE
 x  <-  rev(sort( rnorm(1000, mean=1) )) # DECRESCENTE
 
-# MATEMÁTICA COM VETORES
+# MATEM?TICA COM VETORES
 
 a <-  c(1, 10, 3.4, pi, pi/4, exp(-1), log( 2.23 ), sin(pi/7) )
 b <-  1:8
@@ -220,30 +220,30 @@ d <-  2.5:10
  
 sqrt( a )# RAIZ QUADRADA DE UM VETOR
 
-a - b # SOMA OU SUBTRAÇÃO DE VETORES
+a - b # SOMA OU SUBTRA??O DE VETORES
 
 a^(1/b) # POTENCIA DE VETORES
 
-mean( a ) # MÉDIA
+mean( a ) # M?DIA
 
-var( b ) # VARIÂNCIA
+var( b ) # VARI?NCIA
 
-max( c ) # VALOR MÁXIMO DENTRO DO VETOR
+max( c ) # VALOR M?XIMO DENTRO DO VETOR
 
-min( b ) # VALOR MÍNIMO DENTRO DO VETOR
+min( b ) # VALOR M?NIMO DENTRO DO VETOR
 
-sd( a ) # DESVIO PADRÃO
+sd( a ) # DESVIO PADR?O
 
 sum( c ) # SOMA DOS VALORES DENTRO DE UM VETOR
 
-range( c ) # EXTREMOS MÍNIMOS E MÁXIMOS DENTRO DE UM VETOR
+range( c ) # EXTREMOS M?NIMOS E M?XIMOS DENTRO DE UM VETOR
 
-cumsum(a) # SOMATÓRIO ACUMULATIVO DOS ELEMENTOS DO VETOR
+cumsum(a) # SOMAT?RIO ACUMULATIVO DOS ELEMENTOS DO VETOR
 
-diff(a) # DIFERENÇA ENTRE OS ELEMENTOS DO VETOR
+diff(a) # DIFEREN?A ENTRE OS ELEMENTOS DO VETOR
 
 # 3.3 - MATRIZES
-# SÃO VETORES DE 2 DIMENSÕES QUE ACEITAM APENAS ELEMENTOS DE UMA CLASSE
+# S?O VETORES DE 2 DIMENS?ES QUE ACEITAM APENAS ELEMENTOS DE UMA CLASSE
 
 m <- matrix(1:6, nrow = 2, ncol = 3)
 m
@@ -255,7 +255,7 @@ t(m)      # matriz transposta
 m %*% n   # multiplica??o matricial
 solve(m)  # matriz inversa de m
 
-# CRIANDO UMA MATRIZ ALEATÓRIA (INCIDÊNCIA DE UMA DOENÇA POR TRATAMENTO)
+# CRIANDO UMA MATRIZ ALEAT?RIA (INCID?NCIA DE UMA DOEN?A POR TRATAMENTO)
 m1 <- matrix( 
  rnorm(20,50,10), 
   ncol = 2,
@@ -271,23 +271,23 @@ x <- list(1:5, "Z", TRUE, c("a", "b"))
 x
 
 # 3.5 - DATA.FRAME
-# SÃO TABELAS COM DADOS A SEREM TRABALHADOS, CONTENDO ELEMENTOS DE MULTIPLAS CLASSES
+# S?O TABELAS COM DADOS A SEREM TRABALHADOS, CONTENDO ELEMENTOS DE MULTIPLAS CLASSES
 
 # 4 - IMPORTANDANDO DADOS ----
 
 tb1 <- read.csv('piraclim.csv',dec = ',')
 
-# 4.1 - COMANDOS SUPER ÚTEIS
+# 4.1 - COMANDOS SUPER ?TEIS
 
 head(tb1) # Mostra as primeiras 6 linhas.
-tail(tb1) # Mostra as últimas 6 linhas.
-nrow(tb1) # Número de linhas
-ncol(tb1) # Número de colunas
-dim(tb1) # Número de linhas e de colunas.
-names(tb1) # Os nomes das colunas (variáveis).
+tail(tb1) # Mostra as ?ltimas 6 linhas.
+nrow(tb1) # N?mero de linhas
+ncol(tb1) # N?mero de colunas
+dim(tb1) # N?mero de linhas e de colunas.
+names(tb1) # Os nomes das colunas (vari?veis).
 str(tb1) # Estrutura do data.frame. Mostra, entre outras coisas, as classes de cada coluna.
 
-# 4.2 - MUDANÇA DE CLASSES DE UMA COLUNA:
+# 4.2 - MUDAN?A DE CLASSES DE UMA COLUNA:
 
 
 
@@ -299,7 +299,7 @@ str(tb1) # Estrutura do data.frame. Mostra, entre outras coisas, as classes de c
 
 # 5 - TRABALHANDO EM UM BANCO DE DADOS ----
 
-# 5.1 OPERADORES LÓGICOS
+# 5.1 OPERADORES L?GICOS
 
 x == y # x igual a y
 x != y # x diferente de y
@@ -308,14 +308,13 @@ x <= y #	x menor ou igual a y
 x > y #	x maior que y
 x >= y # x maior ou igual a y
 !x 	# Negativa de x
-x | y #	x ou y são verdadeiros
-x & y #	x e y são verdadeiros
-xor(x, y) #	x ou y são verdadeiros (apenas um deles)
+x | y #	x ou y s?o verdadeiros
+x & y #	x e y s?o verdadeiros
+xor(x, y) #	x ou y s?o verdadeiros (apenas um deles)
 x %in% y # x em y
 
 # 5.2 - FILTRANDO DADOS POR UMA VARI?VEL
-tb2 <- tb1[tb1$ANO!='1986',]
-tb2 <- tb1[tb1$ANO %in% c(1986:1990),]
+tb1 <- tb1[tb1$ANO!='1986',]
 
 # 5.4 - UNINDO CONJUNTOS DE DADOS
 s1 <- tb1[tb1$ANO=='1986',]
@@ -331,13 +330,13 @@ x <- 1991
 if(x %in% tb1$ANO){
   print('Ano presente')
 }else{
-  print('Ano não presente')
+  print('Ano n?o presente')
 }
 
 
 
 # 5.5.2 - FOR (OU ESTRUTURA DE REPETI??O)
-# SEPARANDO UM NÚMERO LIMITADO DE OCORRÊNCIAS
+# SEPARANDO UM N?MERO LIMITADO DE OCORR?NCIAS
 
 #ENCONTRANDO TEMPERATURA M?DIA
 TMED <- c()
@@ -349,7 +348,7 @@ for(i in 1:nrow(tb1)){
 
 
 
-# EXERCÍCIO PARA CORRIGIR A EVAP
+# EXERC?CIO PARA CORRIGIR A EVAP
 
 sample(rnorm(1000,mean=5,sd=1),1)
 
@@ -369,12 +368,12 @@ names(m) <- names(t)[4:ncol(t)]
 
 write.csv(df,'NovaTabela.csv',quote = F,dec=',',sep = ';',row.names = F)
 
-# OUTROS COMANDOS DE EXPORTAÇÃO
+# OUTROS COMANDOS DE EXPORTA??O
 # write.table() - PARA DADOS NO FORMATO TEXTO, OU EM OUTROS FORMATOS UTILIZADOS POR OUTROS PROGRAMAS
 # write.xlsx() - UTILIZADO PELO PACOTE 'xlsx', PARA EXPORTAR ARQUIVOS NO FORMATO EXCEL
-# Write.XLS() - FAZ O MESMO DO ACIMA, MAS DE FORMA MAIS SEGURA E PRÁTICA - PACOTE 'WriteXLS'
+# Write.XLS() - FAZ O MESMO DO ACIMA, MAS DE FORMA MAIS SEGURA E PR?TICA - PACOTE 'WriteXLS'
 
-# 6 - GRÁFICOS ----
+# 6 - GR?FICOS ----
 # 6.1 - SCATTER PLOT
 n <- 100
 x <- 1:n
@@ -393,15 +392,8 @@ hist(rnorm(1000), breaks = 6)
 # 6.4 - BAR PLOT
 # USAR EXEMPLO DO ?HELP DESSA DESTE COMANDO
 
-# 6.5 - TRABALHANDO COM "ggplot2"
-
-install.packages("ggplot2")
-
-library(ggplot2)
-
-
-# 7 - FUNÇÕES ----
-# 7.1 CRIE SEU PRÓPRIO COMANDO NO R
+# 7 - FUN??ES ----
+# 7.1 CRIE SEU PR?PRIO COMANDO NO R
 
 
 Estat_clim <- function(DataF,estat){
