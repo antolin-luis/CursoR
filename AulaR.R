@@ -331,15 +331,15 @@ x <- 1991
 if(x %in% tb1$ANO){
   print('Ano presente')
 }else{
-  print('Ano nÃ£o presente')
+  print('Ano não presente')
 }
 
 
 
 # 5.5.2 - FOR (OU ESTRUTURA DE REPETI??O)
-# SEPARANDO UM NÃšMERO LIMITADO DE OCORR?NCIAS
+# SEPARANDO UM NÚMERO LIMITADO DE OCORR?NCIAS
 
-#ENCONTRANDO TEMPERATURA MÃ‰DIA
+#ENCONTRANDO TEMPERATURA MÉDIA
 TMED <- c()
 for(i in 1:nrow(tb1)){
   
@@ -369,12 +369,12 @@ names(m) <- names(t)[4:ncol(t)]
 
 write.csv(df,'NovaTabela.csv',quote = F,dec=',',sep = ';',row.names = F)
 
-# OUTROS COMANDOS DE EXPORTAÃ‡ÃƒO
+# OUTROS COMANDOS DE EXPORTAÇÃO
 # write.table() - PARA DADOS NO FORMATO TEXTO, OU EM OUTROS FORMATOS UTILIZADOS POR OUTROS PROGRAMAS
 # write.xlsx() - UTILIZADO PELO PACOTE 'xlsx', PARA EXPORTAR ARQUIVOS NO FORMATO EXCEL
-# Write.XLS() - FAZ O MESMO DO ACIMA, MAS DE FORMA MAIS SEGURA E PRÃTICA - PACOTE 'WriteXLS'
+# Write.XLS() - FAZ O MESMO DO ACIMA, MAS DE FORMA MAIS SEGURA E PRÁTICA - PACOTE 'WriteXLS'
 
-# 6 - GRÃFICOS ----
+# 6 - GRÁFICOS ----
 # 6.1 - SCATTER PLOT
 n <- 100
 x <- 1:n
@@ -388,13 +388,20 @@ plot(x, y, type = "l")
 hist(rnorm(1000))
 hist(rnorm(1000), breaks = 6)
 
-# DESCOBRIR NO ?HELP DESTE COMANDO, COMO MUDAR A LEGENDA E O TÃTULO
+# DESCOBRIR NO ?HELP DESTE COMANDO, COMO MUDAR A LEGENDA E O TÍTULO
 
 # 6.4 - BAR PLOT
 # USAR EXEMPLO DO ?HELP DESSA DESTE COMANDO
 
-# 7 - FUNÃ‡Ã•ES ----
-# 7.1 CRIE SEU PRÃ“PRIO COMANDO NO R
+
+# 6.5 - TRABALHANDO COM O "ggplot2"
+
+install.packages('ggplot2')
+
+library('ggplot2')
+
+# 7 - FUNÇÕES ----
+# 7.1 CRIE SEU PRÓPRIO COMANDO NO R
 
 
 Estat_clim <- function(DataF,estat){
