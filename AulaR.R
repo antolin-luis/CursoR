@@ -277,10 +277,10 @@ x
 
 tb1 <- read.csv('piraclim.csv',dec = ',')
 
-# 4.1 - COMANDOS SUPER ?TEIS
+# 4.1 - COMANDOS SUPER ÚTEIS
 
 head(tb1) # Mostra as primeiras 6 linhas.
-tail(tb1) # Mostra as ?ltimas 6 linhas.
+tail(tb1) # Mostra as Últimas 6 linhas.
 nrow(tb1) # N?mero de linhas
 ncol(tb1) # N?mero de colunas
 dim(tb1) # N?mero de linhas e de colunas.
@@ -299,7 +299,7 @@ str(tb1) # Estrutura do data.frame. Mostra, entre outras coisas, as classes de c
 
 # 5 - TRABALHANDO EM UM BANCO DE DADOS ----
 
-# 5.1 OPERADORES L?GICOS
+# 5.1 OPERADORES LÓGICOS
 
 x == y # x igual a y
 x != y # x diferente de y
@@ -308,19 +308,13 @@ x <= y #	x menor ou igual a y
 x > y #	x maior que y
 x >= y # x maior ou igual a y
 !x 	# Negativa de x
-x | y #	x ou y s?o verdadeiros
-x & y #	x e y s?o verdadeiros
-xor(x, y) #	x ou y s?o verdadeiros (apenas um deles)
+x | y #	x ou y são verdadeiros
+x & y #	x e y são verdadeiros
+xor(x, y) #	x ou y são verdadeiros (apenas um deles)
 x %in% y # x em y
 
 # 5.2 - FILTRANDO DADOS POR UMA VARI?VEL
-tb1 <- tb1[tb1$NOME!=' ',]
-# 5.3 - EXECUTANDO OPERA??ES MATEM?TICAS
-# DESCOBRIR O TAMANHO DA ?REA DE LATOSSOLO VERMELHO NO BRASIL
-unique(tb2$DESC_)
-
-# CONTINUAR A PARTIR DAQUI
-
+tb1 <- tb1[tb1$ANO!='1986',]
 
 # 5.4 - UNINDO CONJUNTOS DE DADOS
 s1 <- tb1[tb1$ANO=='1986',]
@@ -341,8 +335,8 @@ if(x %in% tb1$ANO){
 
 
 
-# 5.5.2 - FOR (OU ESTRUTURA DE REPETI??O)
-# SEPARANDO UM N?MERO LIMITADO DE OCORR?NCIAS
+# 5.5.2 - FOR (OU ESTRUTURA DE REPETIÇÃO)
+# SEPARANDO UM NÚMERO LIMITADO DE OCORRÊNCIAS
 
 #ENCONTRANDO TEMPERATURA MÉDIA
 TMED <- c()
@@ -374,12 +368,12 @@ names(m) <- names(t)[4:ncol(t)]
 
 write.csv(df,'NovaTabela.csv',quote = F,dec=',',sep = ';',row.names = F)
 
-# OUTROS COMANDOS DE EXPORTA??O
+# OUTROS COMANDOS DE EXPORTAÇÃO
 # write.table() - PARA DADOS NO FORMATO TEXTO, OU EM OUTROS FORMATOS UTILIZADOS POR OUTROS PROGRAMAS
 # write.xlsx() - UTILIZADO PELO PACOTE 'xlsx', PARA EXPORTAR ARQUIVOS NO FORMATO EXCEL
 # Write.XLS() - FAZ O MESMO DO ACIMA, MAS DE FORMA MAIS SEGURA E PR?TICA - PACOTE 'WriteXLS'
 
-# 6 - GR?FICOS ----
+# 6 - GRÁFICOS ----
 # 6.1 - SCATTER PLOT
 n <- 100
 x <- 1:n
