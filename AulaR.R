@@ -314,12 +314,8 @@ xor(x, y) #	x ou y s?o verdadeiros (apenas um deles)
 x %in% y # x em y
 
 # 5.2 - FILTRANDO DADOS POR UMA VARI?VEL
-tb1 <- tb1[tb1$NOME!=' ',]
-# 5.3 - EXECUTANDO OPERA??ES MATEM?TICAS
-# DESCOBRIR O TAMANHO DA ?REA DE LATOSSOLO VERMELHO NO BRASIL
-unique(tb2$DESC_)
-
-# CONTINUAR A PARTIR DAQUI
+tb2 <- tb1[tb1$ANO!='1986',]
+tb2 <- tb1[tb1$ANO %in% c(1986:1990),]
 
 
 # 5.4 - UNINDO CONJUNTOS DE DADOS
@@ -336,7 +332,7 @@ x <- 1991
 if(x %in% tb1$ANO){
   print('Ano presente')
 }else{
-  print('Ano não presente')
+  print('Ano n?o presente')
 }
 
 
@@ -344,7 +340,7 @@ if(x %in% tb1$ANO){
 # 5.5.2 - FOR (OU ESTRUTURA DE REPETI??O)
 # SEPARANDO UM N?MERO LIMITADO DE OCORR?NCIAS
 
-#ENCONTRANDO TEMPERATURA MÉDIA
+#ENCONTRANDO TEMPERATURA M?DIA
 TMED <- c()
 for(i in 1:nrow(tb1)){
   
@@ -354,7 +350,7 @@ for(i in 1:nrow(tb1)){
 
 
 
-# EXERCÍCIO PARA CORRIGIR A EVAP
+# EXERC?CIO PARA CORRIGIR A EVAP
 
 sample(rnorm(1000,mean=5,sd=1),1)
 
@@ -398,8 +394,8 @@ hist(rnorm(1000), breaks = 6)
 # 6.4 - BAR PLOT
 # USAR EXEMPLO DO ?HELP DESSA DESTE COMANDO
 
-# 7 - FUNÇÕES ----
-# 7.1 CRIE SEU PRÓPRIO COMANDO NO R
+# 7 - FUN??ES ----
+# 7.1 CRIE SEU PR?PRIO COMANDO NO R
 
 
 Estat_clim <- function(DataF,estat){
