@@ -317,7 +317,6 @@ x %in% y # x em y
 tb2 <- tb1[tb1$ANO!='1986',]
 tb2 <- tb1[tb1$ANO %in% c(1986:1990),]
 
-
 # 5.4 - UNINDO CONJUNTOS DE DADOS
 s1 <- tb1[tb1$ANO=='1986',]
 s2 <- tb1[tb1$ANO=='2018',]
